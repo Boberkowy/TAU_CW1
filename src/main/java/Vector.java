@@ -4,7 +4,7 @@ import java.util.List;
  * Created by Boberkowy on 05.03.2017.
  */
 public interface Vector {
-    Vector add( Vector vector);
-    Vector add(Vector vector1, Vector vector2);
+    List<Double> add( List<Double> vector) throws ErrorException;
+    List<Double> add( List<Double> vector1, List<Double> vector2 ) throws ErrorException;
 
 }
