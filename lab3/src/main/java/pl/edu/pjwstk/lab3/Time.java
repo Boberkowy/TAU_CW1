@@ -3,7 +3,7 @@ package pl.edu.pjwstk.lab3;
 /**
  * Created by Boberkowy on 14.03.2017.
  */
-public class Time implements ITime{
+public class Time {
 
     private String hour;
     private String minute;
