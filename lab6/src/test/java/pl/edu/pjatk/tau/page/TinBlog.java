@@ -25,7 +25,6 @@ public class TinBlog extends WebDriverPage{
     }
 
     public void click(String linkText){
-//        findElement(By.id(linkText)).click();
         WebElement e = findElement(By.id(linkText));
         e.click();
     }
@@ -34,7 +33,7 @@ public class TinBlog extends WebDriverPage{
     public void insertData(String loginLinkText, String passLinkText){
         findElement(By.id("loginTextBox")).sendKeys(loginLinkText);
         findElement(By.id("passTextBox")).sendKeys(passLinkText);
-        findElement(By.name("loggin")).click();
+        findElement(By.name("loggin")).submit();
     }
 
     public boolean findElementByText(String linkText){
