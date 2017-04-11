@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import static org.junit.Assert.assertTrue;
 /**
  * Created by Boberkowy on 08.04.2017.
+działa :)
  */
 public class BlogSteps{
 

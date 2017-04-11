@@ -20,7 +20,7 @@ public class TinBlog extends WebDriverPage{
     }
 
     public void open(){
-        get("http://localhost:8080/TIN_BLOG/index.php");
+        get("szuflandia.pjwstk.edu.pl/~s12668/tau/index.php");
         manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
     }
 
