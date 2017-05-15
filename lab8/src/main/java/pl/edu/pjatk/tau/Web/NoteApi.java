@@ -36,7 +36,7 @@ public class NoteApi {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @ResponseBody
-    public List<Note> getAllNotes(@RequestParam(value = "name", defaultValue = "CHUJ") String name)throws SQLException {
+    public List<Note> getAllNotes(@RequestParam(value = "name", defaultValue = "note") String name)throws SQLException {
         List<Note> notesList = new ArrayList();
         notesList = noteManager.getAllNotes();
         return notesList;
@@ -93,13 +93,14 @@ public class NoteApi {
     @RequestMapping(
             value = "note/",
             method = RequestMethod.POST
+
     )
     @ResponseBody
     public ResponseEntity<Void> addNote(@RequestBody Note note,UriComponentsBuilder ucBuilder) throws SQLException{
         noteManager.addNote(note);
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(note.getId()).toUri());
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
 }

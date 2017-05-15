@@ -91,7 +91,6 @@ public class NoteManagerImpl implements NoteManager {
     @Override
     public int editNote(Note note) throws SQLException {
         int count = 0;
-
         try{
             editNoteStmt.setString(1,note.getTitle());
             editNoteStmt.setString(2,note.getDate());
