@@ -11,9 +11,7 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotSame;
 import static org.junit.Assert.*;
 
-/**
- * Created by Boberkowy on 05.05.2017.
- */
+
 public class NoteManagerImplTest {
 
     NoteManagerImpl noteManager = new NoteManagerImpl();
