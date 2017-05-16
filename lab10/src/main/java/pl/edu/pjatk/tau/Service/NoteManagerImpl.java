@@ -33,6 +33,7 @@ public class NoteManagerImpl implements NoteManager {
     private Statement statement;
 
     public NoteManagerImpl() throws SQLException{
+        DriverManager.registerDriver(new org.hsqldb.jdbc.JDBCDriver());
         connection = DriverManager.getConnection(url,username,password);
         statement = connection.createStatement();
 
