@@ -1,0 +1,13 @@
+<dataset>
+    <note TITLE="Title DbUnit 1" DATE = "2013-03-03" CONTENT = "Content DbUnit 1"/>
+    <note TITLE="Title DbUnit 2" DATE = "2014-04-04" CONTENT = "Content DbUnit 2"/>
+    <note TITLE="Title DbUnit 3" DATE = "2015-05-05" CONTENT = "Content DbUnit 3"/>
+    <note TITLE="Title DbUnit 4" DATE = "2016-03-03" CONTENT = "Content DbUnit 4"/>
+    <note TITLE="Title DbUnit 5" DATE = "2017-03-03" CONTENT = "Content DbUnit 5"/>
+    <note TITLE="Title DbUnit 6" DATE = "2017-03-03" CONTENT = "Content DbUnit 6"/>
+    <note TITLE="Title DbUnit 7" DATE = "2017-03-03" CONTENT = "Content DbUnit 7"/>
+    <note TITLE="Title DbUnit 8" DATE = "2017-03-03" CONTENT = "Content DbUnit 8"/>
+    <note TITLE="Title DbUnit 9" DATE = "2017-03-03" CONTENT = "Content DbUnit 9"/>
+    <note TITLE="Title DbUnit" DATE = "2013-03-03" CONTENT = "Content made by JUnit"/>
+
+</dataset>

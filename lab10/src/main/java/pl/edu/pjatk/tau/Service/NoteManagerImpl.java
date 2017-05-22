@@ -33,7 +33,7 @@ public class NoteManagerImpl implements NoteManager {
     private Statement statement;
 
     public NoteManagerImpl() throws SQLException{
-        DriverManager.registerDriver(new org.hsqldb.jdbc.JDBCDriver());
+        DriverManager.registerDriver(new org.hsqldb.jdbcDriver());
         connection = DriverManager.getConnection(url,username,password);
         statement = connection.createStatement();
 
@@ -43,7 +43,7 @@ public class NoteManagerImpl implements NoteManager {
         boolean tableExist = false;
 
         while (rs.next()){
-            if("Notes".equalsIgnoreCase(rs.getString("TABLE_NAME"))){
+            if("Note".equalsIgnoreCase(rs.getString("TABLE_NAME"))){
                 tableExist = true;
                 break;
             }
@@ -54,7 +54,7 @@ public class NoteManagerImpl implements NoteManager {
 
         addNoteStmt = connection.prepareStatement("INSERT INTO  \"PUBLIC\".\"NOTE\" (id,title,date,content) VALUES (?,?,?,?)");
         editNoteStmt = connection.prepareStatement("UPDATE \"PUBLIC\".\"NOTE\" SET title = ?, date = ?, content =? WHERE  id = ?");
-        deleteNoteStmt = connection.prepareStatement("DELETE FROM \"PUBLIC\".\"NOTE\" WHERE id = ?");
+        deleteNoteStmt = connection.prepareStatement("DELETE FROM \"PUBLIC\".\"NOTE\" WHERE \"ID\" = ?");
         getAllNotesStmt = connection.prepareStatement("SELECT * FROM \"PUBLIC\".\"NOTE\"");
         selectNoteStmt = connection.prepareStatement("SELECT * FROM \"PUBLIC\".\"NOTE\" WHERE \"ID\" = ?");
     }
@@ -167,7 +167,7 @@ public class NoteManagerImpl implements NoteManager {
 
     public void clear() throws SQLException{
         try{
-            PreparedStatement stmt = connection.prepareStatement("DELETE FROM PUBLIC.NOTES");
+            PreparedStatement stmt = connection.prepareStatement("DELETE FROM PUBLIC.NOTE");
            if(stmt.executeUpdate() == 1){
                System.out.println("Deleted successful");
            }
