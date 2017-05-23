@@ -167,7 +167,7 @@ public class NoteManagerImpl implements NoteManager {
 
     public void clear() throws SQLException{
         try{
-            PreparedStatement stmt = connection.prepareStatement("DELETE FROM PUBLIC.NOTES");
+            PreparedStatement stmt = connection.prepareStatement("DELETE FROM PUBLIC.NOTE");
            if(stmt.executeUpdate() == 1){
                System.out.println("Deleted successful");
            }
